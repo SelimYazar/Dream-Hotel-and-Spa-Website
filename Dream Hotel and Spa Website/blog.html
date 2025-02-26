@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css"
+      integrity="sha512-9xKTRVabjVeZmc+GUW8GgSmcREDunMM+Dt/GrzchfN8tkwHizc5RP4Ok/MXFFy5rIjJjzhndFScTceq5e6GvVQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/utils.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header id="home" class="main-header2 blog">
+      <div class="navbar">
+        <h1 class="brand">
+          <i class="fa-solid fa-umbrella-beach"></i>
+          <span>Dream</span> Hotel <span>&</span> Spa
+        </h1>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#rooms">Rooms</a></li>
+            <li><a href="blog.html">Blogs</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="content">
+        <h1>Welcome to Dream Hotel & Spa</h1>
+      </div>
+      <div class="video-background">
+        <video autoplay muted loop playsinline>
+          <source src="img/blog.mp4" type="video/mp4" />
+        </video>
+      </div>
+    </header>
+
+    <main>
+      <!--Sunulan hizmetler-->
+
+      <section class="articles">
+        <article class="article flex-columns">
+          <div class="row">
+            <div class="column">
+              <div class="column-1">
+                <img src="img/restoran.jpg" alt="" />
+              </div>
+            </div>
+            <div class="column">
+              <div class="column-2 bg-blog">
+                <h2>Pub Restoration</h2>
+                <p>
+                  With our renewed menu and modern decoration, we offer a unique
+                  gastronomic experience to every visitor in our hotel
+                  restaurant.
+                </p>
+                <button class="btn btn-outline">Read More</button>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="article flex-columns flex-reverse">
+          <div class="row">
+            <div class="column">
+              <div class="column-1">
+                <img src="img/sale.jpg" alt="" />
+              </div>
+            </div>
+            <div class="column">
+              <div class="column-2 bg-blog2">
+                <h2>Discounted Holiday Time</h2>
+                <p>
+                  Discounted holiday opportunities are offered to you at our
+                  hotel so that you can get away from the city with your loved
+                  ones and have a relaxing and enjoyable holiday experience.
+                  Everything is ready for you to create unforgettable memories
+                  during this special period, where every detail has been
+                  considered, accompanied by comfortable accommodation, rich
+                  activities and carefully prepared menus. <br /><br />
+                  <strong>Come on, grab your suitcase.</strong>
+                </p>
+                <button class="btn btn-outline">Read More</button>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="article flex-columns">
+          <div class="row">
+            <div class="column">
+              <div class="column-1">
+                <img src="img/pool.jpg" alt="" />
+              </div>
+            </div>
+            <div class="column">
+              <div class="column-2 bg-blog">
+                <h2>Dive Into Luxury: Enjoy Our Hotel Pool Experience</h2>
+                <p>
+                  At our hotel, we believe a vacation isn’t complete without a
+                  refreshing dip in a luxurious pool. Whether you prefer to
+                  lounge by the poolside with a cool drink or swim a few laps,
+                  our pool is the perfect place to unwind. Surrounded by
+                  beautiful scenery and designed for ultimate relaxation, our
+                  pool offers a serene escape from the daily grind.
+                </p>
+                <button class="btn btn-outline">Read More</button>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="article flex-columns flex-reverse">
+          <div class="row">
+            <div class="column">
+              <div class="column-1">
+                <img src="img/plane.jpg" alt="" />
+              </div>
+            </div>
+            <div class="column">
+              <div class="column-2 bg-blog2">
+                <h2>
+                  Fly and Stay: Exclusive Discounts for Your Dream Vacation"
+                </h2>
+                <p>
+                  Book your dream vacation with us and enjoy exclusive discounts
+                  on your flight tickets when you choose our hotel stay package.
+                  We’ve partnered with leading airlines to offer you the best of
+                  both worlds—luxury accommodation and affordable flights.
+                </p>
+                <button class="btn btn-outline">Read More</button>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer class="footer bg-light">
+      <div class="social">
+        <a href=""><i class="twitter fab fa-twitter fa-2x"></i></a>
+        <a href=""><i class="instagram fab fa-instagram fa-2x"></i></a>
+        <a href=""><i class="facebook fab fa-facebook fa-2x"></i></a>
+
+        <a href=""><i class="youtube fab fa-youtube fa-2x"></i></a>
+        <a href=""><i class="linkedin fab fa-linkedin fa-2x"></i></a>
+      </div>
+      <p>Copyright Reserved - Dream Hotel&Spa</p>
+    </footer>
+  </body>
+</html>
+
+<!--
+.main-header .blog {} iç içe geçmiş (nested) bir seçimdir ve .main-header sınıfına sahip bir üst elemanın içinde bulunan .blog sınıfına sahip alt elemanları hedefler.
+ Örneğin, <div class="main-header"><div class="blog"></div></div> yapısındaki .blog'u seçer.
+
+Öte yandan, .main-header.blog {} birlikte kullanılan sınıfları hedefler, yani aynı HTML elemanında hem main-header hem de blog sınıfları varsa
+ (örneğin: <div class="main-header blog"></div>) bu elemanı seçer. 🚀
+-->

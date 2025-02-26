@@ -1,0 +1,405 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+/*google fonts -Open Sansa*/
+/*style.css sadece bu projeye özel*/
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Open Sans", serif;
+  font-size: 1.6rem;
+  background-color: #fff;
+  color: #333;
+  line-height: 1.6rem;
+  /*line-height: yazılar arasındaki satır yüksekliği*/
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+h1,
+h2 {
+  font-weight: 300;
+  line-height: 1.2rem;
+}
+p {
+  margin: 1rem 0;
+}
+
+img {
+  width: 100%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--dark);
+  opacity: 0.8;
+  color: var(--white);
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  /*position:fixed diyince içerik kadar yer kaplıyodu genişliğini kaybediyodu o yüzden width kullandık*/
+  height: 7rem;
+  padding: 0 3rem;
+}
+.main-header2 .navbar {
+  background-color: var(--blog-title);
+}
+.navbar a {
+  color: var(--white);
+  padding: 1rem 2.2rem;
+  margin: 0 0.5rem;
+}
+.navbar a:hover {
+  border-bottom: 3px solid var(--warning);
+  border-top: 3px solid var(--warning);
+}
+.navbar a:active {
+  border-bottom: 3px solid var(--white);
+  border-top: 3px solid var(--white);
+}
+.navbar ul {
+  display: flex;
+}
+
+.navbar .brand {
+  font-weight: 500;
+}
+
+.navbar h1 {
+  font-size: 3.4 rem;
+}
+/*ileride bi çelişki çıkmazsa .navbar h1 ve .navbar .brand i birleştir*/
+.navbar span,
+.content a {
+  color: var(--warning);
+}
+.navbar .brand i:hover {
+  color: var(--warning);
+  transform: scale(1.1);
+}
+/*Header*/
+
+.main-header {
+  background-image: url("../img/bg-1.jpeg");
+  background-repeat: no-repeat;
+  /*sayfa genişlediğinde resmin tekrarlamasını kapatır*/
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh;
+  color: var(--white);
+  position: relative;
+}
+.main-header2 {
+  /* background-image: url("../img/bg-1.jpeg"); */
+  /* background-repeat: no-repeat; */
+  /*sayfa genişlediğinde resmin tekrarlamasını kapatır*/
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 70vh;
+  color: var(--white);
+  position: relative;
+  z-index: 1;
+}
+.main-header2.blog .video-background {
+  position: absolute; /* Sayfada sabit kalır */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 70vh;
+  overflow: hidden;
+  z-index: -1; /* İçeriklerin arkasında kalmasını sağlar */
+}
+
+.main-header2.blog .video-background video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Ortalar */
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: cover;
+}
+.main-header2 .content {
+  display: flex;
+  justify-content: center; /* Yatayda ortalar */
+  align-items: center; /* Dikeyde ortalar */
+  height: 100%; /* Yüksekliği 100% yaparak tüm alanı kapsar */
+  color: white; /* Yazıyı beyaz yapmak için */
+  text-align: center; /* Yazının ortalanması için */
+  z-index: 1; /* İçeriğin video arkasına gitmemesi için */
+}
+.main-header2 .content h1 {
+  font-weight: 600; /* Daha kalın bir yazı */
+}
+.main-header .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+  /*height:100% sayesinde içinde bulunduğu container ın yüksekliği kadar yükseklik kullanır*/
+}
+
+.main-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(3, 105, 152, 0.271);
+}
+
+.main-header * {
+  z-index: 1;
+}
+/*main-header içerisindeki herşey anlamına gelmektedir. z-index vererek
+ön plana çıkmasını sağladık.*/
+.main-header .content h1 {
+  font-size: 4.5rem;
+}
+.main-header .content p {
+  font-size: 2.3rem;
+  max-width: 64rem;
+  margin: 4.17rem 0 2rem;
+}
+
+/* icons */
+.icons {
+  padding: 30px;
+}
+
+.icons h3 {
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
+.icons i {
+  background-color: var(--info);
+  color: var(--white);
+  padding: 1rem;
+  border-radius: 36%;
+  margin-bottom: 1.5rem;
+}
+.about {
+  color: var(--white);
+}
+
+/*gallery*/
+.gallery img:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.gallery .img {
+  overflow: hidden;
+}
+.gallery .img img {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s ease-out;
+  object-fit: cover;
+}
+.gallery .img img:hover {
+  transform: scale(1.2);
+}
+
+.card {
+  color: var(--white);
+  font-weight: 70rem;
+  border-radius: 10%;
+  margin: 0 1rem;
+}
+.card:hover {
+  transform: translateY(-30px);
+}
+.card img {
+  border-top-left-radius: 10%;
+  border-top-right-radius: 10%;
+}
+
+.card-body {
+  padding: 4rem;
+  margin-top: -2px;
+  border-bottom-right-radius: 40%;
+  border-bottom-left-radius: 40%;
+}
+.card-body p {
+  padding-top: 10px;
+}
+
+.visitors img {
+  border-radius: 50%;
+}
+
+.visitors img:hover {
+  opacity: 0.6;
+}
+
+.contact-form {
+  width: 100%;
+  padding: 2rem 0;
+}
+.contact-form label {
+  display: block;
+  margin-bottom: 1.5rem;
+  margin-top: 1rem;
+}
+
+.contact-form .form-control {
+  margin-bottom: 3rem;
+}
+
+.contact-form input {
+  width: 100%;
+  padding: 0.5 rem;
+  height: 5rem;
+  border: 1px solid #f6f6f6;
+}
+
+.date-range-container > div button {
+  justify-items: center;
+}
+
+.date-range-container {
+  display: flex;
+}
+.date-range-container > div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.articles {
+  padding: 3rem 5rem;
+  background-color: var(--blog-main-background);
+}
+.article {
+  margin: 1.5rem 0;
+}
+.article h2,
+.article p {
+  color: var(--white);
+  font-size: 2rem;
+  padding: 0 4rem;
+  line-height: 1.3;
+}
+.article p {
+  text-indent: 20px;
+}
+.article p::first-letter {
+  font-size: 1.3em; /* İlk harfi iki katı büyüklüğünde yapar */
+  font-weight: bold; /* Harfi kalın yapar */
+  margin-right: 2px; /* Harf ile metin arasına biraz boşluk ekler */
+}
+
+.about h2,
+.about p {
+  color: var(--white);
+  font-size: 2rem;
+  padding: 0 4rem;
+  line-height: 1.3;
+}
+.about p {
+  text-indent: 20px;
+}
+.about p::first-letter {
+  font-size: 1.3em; /* İlk harfi iki katı büyüklüğünde yapar */
+  font-weight: bold; /* Harfi kalın yapar */
+  margin-right: 2px; /* Harf ile metin arasına biraz boşluk ekler */
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+}
+.footer i:hover {
+  opacity: 0.6;
+  transform: scale(1.2);
+}
+.footer .twitter {
+  color: var(--info);
+  margin: 0 0.5rem;
+}
+.footer .instagram {
+  color: var(--warning);
+  margin: 0 0.5rem;
+  background: linear-gradient(
+    45deg,
+    #f9ce34,
+    #ee2a7b,
+    #6228d7
+  ); /* Instagram renkleri */
+  background-clip: text; /* Yalnızca metni boyamak için */
+  -webkit-text-fill-color: transparent; /* Metni saydam yap */
+}
+.footer .youtube {
+  color: var(--danger);
+  margin: 0 0.5rem;
+}
+.footer .facebook {
+  color: var(--info);
+  margin: 0 0.5rem;
+}
+.footer .linkedin {
+  color: var(--info);
+  margin: 0 0.5rem;
+}
+.footer .social {
+  margin-bottom: 1rem;
+}
+
+/*responsive-mobil tasarım*/
+
+@media (max-width: 768px) {
+  html {
+    font-size: 8px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    height: 15rem;
+    padding: 3rem;
+  }
+  .navbar a {
+    padding: 1rem 2rem;
+    margin: 1rem 0.5rem;
+  }
+  .card {
+    margin-bottom: 20px;
+  }
+  .card:hover {
+    transform: none; /* Hareket etmeyi engeller */
+  }
+  .visitors img {
+    width: 60%;
+  }
+}

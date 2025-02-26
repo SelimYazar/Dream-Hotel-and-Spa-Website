@@ -1,0 +1,509 @@
+/*utils.css farklı projelerdede kullanılacak*/
+/* 
+    #007bff
+    #6c757d
+    #28a745
+    #dc3545
+    #ffc107
+    #17a2b8
+    #343a40
+    #f8f9fa
+*/
+
+:root {
+  --white: #fff;
+  --primary: #007bff;
+  --secondary: #6c757d;
+  --third: #343a40;
+  --success: #28a745;
+  --danger: #dc3545;
+  --warning: #ffc107;
+  --info: #17a2b8;
+  --dark: #343a40;
+  --light: #dee2e6;
+  --blog: #818c78;
+  --blog2: #a7b49e;
+  --blog-title: #5c7285;
+  --blog-main-background: #e2e0c8;
+}
+
+/* text color */
+.text-primary {
+  color: var(--primary);
+}
+.text-secondary {
+  color: var(--secondary);
+}
+.text-success {
+  color: var(--success);
+}
+.text-danger {
+  color: var(--danger);
+}
+.text-warning {
+  color: var(--warning);
+}
+.text-info {
+  color: var(--info);
+}
+.text-dark {
+  color: var(--dark);
+}
+.text-light {
+  color: var(--light);
+}
+
+/* bg-colors */
+.bg-blog-main-background {
+  background-color: var(--blog-main-background);
+}
+.bg-blog-title {
+  background-color: var(--blog-title);
+}
+.bg-blog {
+  background-color: var(--blog);
+}
+.bg-blog2 {
+  background-color: var(--blog2);
+}
+.bg-primary {
+  background-color: var(--primary);
+}
+.bg-secondary {
+  background-color: var(--secondary);
+}
+.bg-success {
+  background-color: var(--success);
+}
+.bg-danger {
+  background-color: var(--danger);
+}
+.bg-warning {
+  background-color: var(--warning);
+}
+.bg-info {
+  background-color: var(--info);
+}
+.bg-dark {
+  background-color: var(--dark);
+}
+.bg-light {
+  background-color: var(--light);
+}
+
+/* buttons */
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  opacity: 0.7;
+}
+
+.btn-primary {
+  color: var(--white);
+  background-color: var(--primary);
+}
+
+.btn-secondary {
+  color: var(--white);
+  background-color: var(--secondary);
+}
+.btn-secondary:hover {
+  color: var(--secondary);
+  background-color: var(--white);
+}
+.btn-secondary:active {
+  color: var(--white);
+  background-color: var(--secondary);
+}
+
+.btn-success {
+  color: var(--white);
+  background-color: var(--success);
+}
+
+.btn-danger {
+  color: var(--white);
+  background-color: var(--danger);
+}
+
+.btn-warning {
+  color: var(--white);
+  background-color: var(--warning);
+}
+
+.btn-dark {
+  color: var(--white);
+  background-color: var(--dark);
+}
+
+.btn-outline-primary {
+  background: transparent;
+  /*transparent background renginin olmadığı anlamına gelir*/
+  border: 1px solid var(--primary);
+  color: var(--dark);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--primary);
+  border: 1px solid var(--primary);
+  color: var(--white);
+}
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--white);
+  color: var(--white);
+}
+.btn-outline:hover {
+  background: var(--white);
+  border: 1px solid var(--white);
+  color: var(--secondary);
+}
+.btn-outline:active {
+  background: transparent;
+  border: 1px solid var(--white);
+  color: var(--white);
+}
+/* flex items */
+.flex-items {
+  display: flex;
+  /* width: 100%; */
+  /* justify-content: space-between; */
+  height: 100%;
+  justify-content: center;
+  text-align: center;
+}
+
+.flex-items > div {
+  margin: 0px 20px;
+  padding: 20px;
+  flex-basis: 100%;
+  transition: transform 0.5s ease-out 0.3s, box-shadow 0.5s ease-out 0.3s;
+  border-radius: 20%;
+}
+/*transform ve box-shadow a gecikme sağlandı.*/
+.flex-items > div:hover {
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5); /* Hover durumunda gölge eklensin */
+  border-radius: 20%;
+  /* background-color: var(--light); */
+  transform: scale(1.1);
+  background-color: #e3f2fd;
+}
+/*hover durumunda boyutunun büyümesi ve shadow eklendi.hem hover hemde normal
+zamanlarda köşeler yuvarlatıldı*/
+.flex-columns.flex-reverse .row {
+  flex-direction: row-reverse;
+  /*satırdaki elemanların yerini değiştirir*/
+}
+.flex-columns .row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.flex-columns .column {
+  flex: 1; /*→ Flex itemların(flex container row olduğuna göre column) eşit olarak genişlemesini ve boşluğu doldurmasını sağlar. Flex itemlar boşluğu tam doldurmadığı için kullandık*/
+}
+.flex-columns.article .column:nth-child(odd) {
+  flex: 40%;
+}
+.flex-columns.article .column:nth-child(even) {
+  flex: 60%;
+}
+.flex-columns .column .column-1,
+.flex-columns .column .column-2 {
+  height: 100%; /*içinde bulunduğu column un %100 ünü kaplar*/
+}
+.flex-columns .column-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* padding: 3rem; */
+  justify-content: space-evenly;
+}
+.flex-columns .column-1 {
+  overflow: hidden;
+}
+.flex-columns img {
+  width: 100%;
+  height: 100%;
+  /* içinde bulunduğu column-1 in tamamını kaplar*/
+  transition: transform 0.6s ease-out;
+  object-fit: cover;
+}
+.flex-columns img:hover {
+  transform: scale(1.2);
+  opacity: 0.7;
+}
+
+/* flex grid */
+.flex-grid .row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 0.4rem;
+}
+.flex-grid .column {
+  flex: 25%;
+  padding: 0 0.4rem;
+}
+/*galeri*/
+.section-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  padding: 4rem;
+}
+
+.section-header h2 {
+  margin: 2rem;
+  font-size: 3.5rem;
+}
+
+.gallery-padding {
+  padding: 3rem 3rem 5rem;
+}
+
+.flex-items2 {
+  display: flex;
+  /* width: 100%; */
+  /* justify-content: space-between; */
+  height: 100%;
+  justify-content: center;
+  text-align: center;
+}
+
+.flex-items2 > div {
+  padding: 20px;
+  flex-basis: 100%;
+  transition: all 0.5s;
+  /* border-radius: 10%; */
+}
+/*transform ve box-shadow a gecikme sağlandı.*/
+.flex-items2 > div:hover {
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.6); /* Hover durumunda gölge eklensin */
+  background-color: #e3f2fd;
+  border-radius: 10%;
+}
+.flex-items3 {
+  display: flex;
+  /* width: 100%; */
+  /* justify-content: space-between; */
+  height: 100%;
+  justify-content: center;
+  text-align: center;
+}
+
+.flex-items3 > div {
+  padding: 20px;
+  flex-basis: 100%;
+  transition: all 0.5s;
+  /* border-radius: 10%; */
+}
+.flex-items3 > div h2 {
+  margin: 2rem;
+}
+.flex-items3 img:hover {
+  border: 3px solid var(--third);
+}
+/*contact*/
+.flex-columns h2 {
+  font-size: 3.5rem;
+  font-weight: 500;
+}
+.flex-columns p {
+  margin: 0 2rem;
+}
+.flex-columns2 h2 {
+  font-size: 3.5rem;
+  font-weight: 500;
+}
+.flex-columns2 p {
+  margin: 0 2rem;
+}
+.flex-columns2 .row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.flex-columns2 .column {
+  flex: 1; /*→ Flex itemların(flex container row olduğuna göre column) eşit olarak genişlemesini ve boşluğu doldurmasını sağlar. Flex itemlar boşluğu tam doldurmadığı için kullandık*/
+}
+
+.flex-columns2 .column .column-1,
+.flex-columns2 .column .column-2 {
+  height: 100%; /*içinde bulunduğu column un %100 ünü kaplar*/
+}
+.flex-columns2 .column-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+}
+
+.flex-columns2 img {
+  width: 100%;
+  height: 100%;
+  /* içinde bulunduğu column-1 in tamamını kaplar*/
+}
+
+.column-1 video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Videonun taşmasını ve boşlukları engeller */
+  display: block;
+}
+input {
+  font-family: Arial, sans-serif; /* Yazı tipini belirler */
+  font-size: 16px; /* Yazı büyüklüğünü ayarlar */
+  font-weight: 600; /* Yazıyı kalınlaştırır (400 normal, 700 bold) */
+  color: var(--dark); /* Yazı rengini koyu gri yapar */
+  padding: 15px; /* İç boşluk ekleyerek daha rahat bir görünüm sağlar */
+  border: 2px solid var(--secondary); /* Kenarlık rengini belirler */
+  border-radius: 5px; /* Köşeleri yuvarlar */
+  width: 100%; /* Tam genişlik kaplamasını sağlar */
+  box-sizing: border-box; /* Padding ve border dahil genişliği korur */
+}
+
+@media (max-width: 768px) {
+  .flex-items {
+    flex-direction: column;
+  }
+  .flex-items > div {
+    margin: 15px 12rem;
+  }
+  .flex-items2 {
+    flex-direction: column;
+  }
+  .flex-items3 {
+    flex-direction: column;
+  }
+  .flex-columns .column {
+    flex: 100% !important;
+    /*flex:1; yerine flex :100% yaptık. column flex item olduğu ve .column üzerindeki .row display:flex (conteiner) ve 
+    flex:wrap olduğundan flex:direction varsayılan olarak row olsada fleex itemların birisi tek başına satırı kaplar
+    diğer itemlar alt satırlardan devam eder.*/
+  }
+  .flex-columns2 .column {
+    flex: 100%;
+  }
+
+  .flex-columns .column h2,
+  p {
+    padding: 2rem 0rem;
+  }
+  .flex-columns button {
+    margin-bottom: 2rem;
+  }
+  .flex-grid .column {
+    flex: 50%;
+    padding: 0.5rem 0.5rem;
+  }
+}
+
+/*
+Flex item'ların (.column öğeleri) width: 100% olmasına rağmen yatayda tüm satırı kaplamamalarının sebebi default olarak flexbox içinde öğelerin "content-based" (içeriğe bağlı) genişliğe sahip olmasıdır.
+
+ Neden width: 100% İşe Yaramadı?
+Flexbox içindeki öğeler (.column), varsayılan olarak içeriği kadar genişler.
+
+Flex container (.row) içindeki flex itemlar (.column), içeriğine bağlı olarak genişler ve width: 100% sadece statik genişlik belirttiği için flexbox’ın dinamik dağılımını etkilemez.
+Flexbox’ın flex-wrap: wrap; kullanılması genişliği etkileyebilir.
+
+Eğer .row içinde toplam flex item genişliği %100’ü aşmazsa, öğeler sadece içeriği kadar genişleyip, tam satırı doldurmaz.
+Flexbox'da width: 100% yerine flex: 1 daha etkili olur.
+
+flex: 1; dediğimizde öğeler eşit olarak büyür ve tüm satırı kaplar.
+Eğer sadece width: 100% kullansaydık, bu öğelerin esnek genişleme mekanizmasını kullanmamasına neden olurdu.
+
+*/
+
+/*flex: 1; Ne Anlama Geliyor?
+css
+Kopyala
+Düzenle
+.item {
+  flex: 1;
+}
+Bu aslında 3 farklı özelliğin kısa yazımıdır:
+
+css
+Kopyala
+Düzenle
+.item {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0%;
+}
+Bu özellikleri tek tek anlamak, flex: 1;’in nasıl çalıştığını kavramana yardımcı olur.
+
+1️⃣ flex-grow: 1; — Boş Alanı Paylaşma
+flex-grow özelliği, boş alanı nasıl paylaşacağını belirler.
+1 değeri, diğer flex öğeleriyle eşit olarak genişlemesini sağlar.
+🔹 Örnek:
+Eğer 3 tane flex: 1; olan öğen varsa, bunlar eşit olarak genişler ve toplam genişlikleri 100%’ü kaplar.
+
+css
+Kopyala
+Düzenle
+.container {
+  display: flex;
+}
+
+.item {
+  flex: 1; /* Tüm item'lar eşit genişler 
+}
+Sonuç:
+
+Her biri eşit genişlikte olur.		
+Eğer bir item’a flex-grow: 2; verirsen:
+
+css
+
+.item1 { flex: 2; }
+.item2 { flex: 1; }
+.item3 { flex: 1; }
+Bu durumda item1, diğerlerinden 2 kat daha büyük olur.
+
+2️⃣ flex-shrink: 1; — Küçülmeye İzin Verme
+flex-shrink özelliği, eğer yer yoksa küçülmeye izin verip vermeyeceğini belirler.
+1 değeri, gerektiğinde diğer öğelerle birlikte küçülmesini sağlar.
+🔹 Örnek:
+Eğer flex: 1; kullanıyorsan ve ekran daralıyorsa, her öğe eşit şekilde küçülür.
+
+Eğer bir öğeye flex-shrink: 0; verirsen, küçülmez ve diğer öğeler sıkışır.
+
+css
+Kopyala
+Düzenle
+.item1 { flex: 1; flex-shrink: 0; } /* Küçülmez 
+.item2 { flex: 1; flex-shrink: 1; } Küçülür 
+3️⃣ flex-basis: 0%; — Başlangıç Genişliğini Ayarla
+flex-basis, bir öğenin başlangıç genişliğini belirler.
+0% demek, başlangıçta hiçbir genişliği olmaması ve sadece flex-grow değerine göre genişlemesi anlamına gelir.
+🔹 Eğer flex-basis: auto; olursa:
+
+İçeriğe göre genişler.
+Örneğin, metin uzun olursa daha fazla yer kaplar.
+🔹 Eğer flex-basis: 0%; olursa:
+
+Başlangıçta hiçbir genişliği yoktur ve tüm öğeler boş alanı eşit şekilde paylaşır.
+🎯 Özet: flex: 1; Ne Yapıyor?
+css
+
+.item {
+  flex: 1;  Aynı şey: flex-grow: 1; flex-shrink: 1; flex-basis: 0%; 
+}
+Boş alanı eşit olarak paylaşır (flex-grow: 1;)
+Gerektiğinde küçülür (flex-shrink: 1;)
+Başlangıçta belirli bir genişliği yoktur (flex-basis: 0%;)
+Bu sayede, öğeler eşit büyüyerek tüm satırı kaplamış oldu. 🎯
+
+*/
